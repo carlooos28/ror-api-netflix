@@ -3,7 +3,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
     create_table :movies do |t|
       t.string :title_movie
       t.text :movie_overview
-      t.integer :vote_count
+      t.integer :vote_count, :default => 1
       t.string :poster_path
       t.date :release_date
 

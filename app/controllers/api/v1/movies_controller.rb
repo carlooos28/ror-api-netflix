@@ -19,7 +19,7 @@ module Api
 
         @movies = Movie.all
 
-        if params[:movie].present?
+        if params[:movie].present? 
           @movies = MoviesSearchService.search(@movies, movie_params)
         end
         render json: @movies, status: :ok 

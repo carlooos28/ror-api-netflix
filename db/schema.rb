@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_05_18_031306) do
   create_table "movies", force: :cascade do |t|
     t.string "title_movie"
     t.text "movie_overview"
-    t.integer "vote_count"
+    t.integer "vote_count", default: 1
     t.string "poster_path"
     t.date "release_date"
     t.datetime "created_at", null: false
